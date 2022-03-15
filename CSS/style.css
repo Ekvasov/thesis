@@ -4,6 +4,9 @@
   box-sizing: border-box;
 }
 
+
+  /* заголовок */
+
  .main-header {
    position: relative;
    display: flex;
@@ -90,6 +93,7 @@
 }
 
 
+/* тренды */
 
 .main-section {
   padding-top: 56px;
@@ -220,6 +224,7 @@
 }
 
 
+  /* посты */
 
 .news-block {
   display: flex;
@@ -322,15 +327,18 @@
   width: 270px;
 }
 
-.section1-title {
-  padding-top:7px;
-  padding-left: 4px;
+.section-title {
   font-size: 14px;
   color: #0f0d0e;
   font-weight: 700;
   font-family: open sans;
   text-align: center;
   text-transform: uppercase;
+}
+
+.section1-title {
+  padding-top:7px;
+  padding-left: 4px;
 }
 
 .section1-title::after, .section3-title::after, .section4-title::after, .section5-title::after {
@@ -361,7 +369,6 @@
 
 .column-post {
   padding-top: 10px;
-  widht: 182px;
 }
 
 .column-date {
@@ -422,7 +429,7 @@
   width: 48px;
   height: 48px;
   border: none;
-  background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/search.svg");
+  background-image: url("../svg/search.svg");
   background-repeat: no-repeat;
   background-size: 18px;
   background-position: center center;
@@ -434,12 +441,6 @@
 }
 
 .section3-title {
-  font-size: 14px;
-  color: #0f0d0e;
-  font-weight: 700;
-  font-family: open sans;
-  text-align: center;
-  text-transform: uppercase;
 }
 
 .section3-field {
@@ -470,12 +471,6 @@
 }
 
 .section4-title {
-  font-size: 14px;
-  color: #0f0d0e;
-  font-weight: 700;
-  font-family: open sans;
-  text-align: center;
-  text-transform: uppercase;
 }
 
 .tegs-names {
@@ -505,12 +500,6 @@
 
 .section5-title {
   padding-left: 3px;
-  font-size: 14px;
-  color: #0f0d0e;
-  font-weight: 700;
-  font-family: open sans;
-  text-align: center;
-  text-transform: uppercase;
 }
 
 .topics-name {
@@ -543,7 +532,127 @@
   font-family: open sans;
 }
 
+
+  /* магазин */
+
+.shop {
+  max-width: 1200px;
+  padding: 49px 15px 0;
+  margin: auto;
+}
+
+.shop-title {
+  font-size: 20px;
+  line-height: 29px;
+  color: #0f0d0e;
+  font-weight: 700;
+  font-family: open sans;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.shop-title::after {
+  content: "";
+  display: block;
+  margin: auto;
+  margin-top: 6px;
+  height: 3px;
+  width: 66px;
+  border-top: 3px;
+  background-color: #b59f5b;
+}
+
+.products {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 205px;
+}
+
+.product {
+  padding: 0 22px 25px;
+  width: 346px;
+  outline: 3px solid #b59f5b;
+  outline-offset: 0px;
+}
+
+.product-picture {
+  margin-top: -175px;
+}
+
+.product-title {
+  margin-top:17px;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  font-family: open sans;
+  text-transform: uppercase;
+}
+
+.product-title-hyper {
+  color: #0f0d0e;
+  text-decoration: none;
+}
+
+.product-text {
+  margin-top: 3px;
+  font-size: 15px;
+  line-height: 22px;
+  color: #0f0d0e;
+  font-weight: 400;
+  font-family: open sans;
+}
+
+.product-text-hyper {
+  color: #b59f5b;
+  text-decoration: none;
+}
+
+.price-button {
+  padding-top: 22px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.product__prices {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 3px;
+}
+
+.product__price-old {
+  font-size: 14px;
+  line-height: 24px;
+  text-decoration: line-through;
+  color: #0f0d0e;
+  font-weight: 700;
+  font-family: open sans;
+}
+
+.product__price {
+  margin-top: -3px;
+  font-size: 20px;
+  line-height: 24px;
+  color: #0f0d0e;
+  font-weight: 700;
+  font-family: open sans;
+}
+
+.buy {
+  width: 140px;
+  height: 48px;
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: 700;
+  font-family: open sans;
+  text-transform: uppercase;
+  background-color: #b59f5b;
+  border: none;
+}
+
 @media (min-width: 641px) and (max-width: 1199px) {
+
+  /* заголовок */
 
   .main-header {
     padding-top: 43px;
@@ -586,6 +695,7 @@
   }
 
 
+  /* тренды */
 
   .main-section {
     padding-top: 42px;
@@ -639,9 +749,132 @@
     font-size: 17px;
     line-height: 22px;
   }
+
+
+  /* посты */
+
+  .news-block {
+    padding: 40px 36px 0px 34px;
+    max-width: 100%;
+  }
+
+  .main {
+    width: calc(100% - 305px);
+  }
+
+  .posts {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .posts:nth-child(n+2) {
+    margin-top: 30px;
+  }
+
+  .picture {
+    width: 100%;
+    padding-top: 2px;
+  }
+
+  .news {
+    width: 100%;
+    padding-top: 7px;
+  }
+
+  .news-title {
+    padding-top: 9px;
+    font-size: 17px;
+    line-height: 22px;
+  }
+
+  .date-author {
+    margin-top: 29px;
+  }
+
+  .news-text {
+    margin-top: 28px;
+  }
+
+  .posts-border {
+    margin-top: 38px;
+    display: block;
+    border-top: 3px solid #eeeeee;
+  }
+
+  .posts-border-5 {
+    display: none;
+  }
+
+  .news-text-music {
+    margin-top: 30px;
+  }
+
+  .section1-title {
+    padding-left: 5px;
+  }
+
+  .paragraph {
+    width: 270px;
+    margin-top: 13px;
+  }
+
+  .column-picture {
+    margin-right: 19px;
+    margin-top: 16px;
+  }
+
+  .search {
+    margin-top: 55px;
+  }
+
+  .section3 {
+    margin-top: 58px;
+  }
+
+
+  /* магазин */
+
+  .shop {
+    max-width: 100%;
+    padding: 81px 36px 0;
+    margin: auto; */
+  }
+
+  .shop-title {
+    font-size: 18px;
+  }
+
+  .products {
+    margin-top: 226px;
+    flex-wrap: wrap;
+  }
+
+  .product {
+    padding: 0 21px 25px;
+    width: 48%;
+  }
+
+  .product:nth-child(n+3) {
+    margin-top: 230px;
+  }
+
+  .product-picture {
+    margin-top: -198px;
+  }
+
+  .product-title {
+    margin-top:15px;
+    font-size: 17px;
+    line-height: 22px;
+  }
 }
 
 @media (max-width: 640px) {
+
+
+
+  /* заголовок */
+
   .main-header {
     padding-top: 32px;
     min-height: 640px;
@@ -687,6 +920,8 @@
   }
 
 
+
+  /* тренды */
 
   .main-section {
     padding-top: 35px;
@@ -743,5 +978,271 @@
     margin-top: -1px;
     font-size: 16px;
     line-height: 20px;
+  }
+
+
+
+  /* посты */
+
+  .news-block {
+    flex-direction: column;
+    width: 100%;
+    padding: 30px 15px 0px;
+  }
+
+  .main {
+    width: 100%;
+  }
+
+  .posts {
+    flex-direction: column;
+  }
+
+  .posts:nth-child(n+2) {
+    margin-top: 20px;
+  }
+
+  .picture {
+    width: 100%;
+  }
+
+  .news {
+    width: 100%;
+    padding-top: 7px;
+  }
+
+  .news-title {
+    padding-top: 8px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .date-author {
+    margin-top: 6px;
+  }
+
+  .news-date {
+    line-height: 40px;
+  }
+
+  .news-author {
+    line-height: 40px;
+  }
+
+  .news-text {
+    padding-right: 3px;
+    margin-top: 2px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .posts-border {
+    margin-top: 40px;
+    display: block;
+    border-top: 3px solid #eeeeee;
+  }
+
+  .news-text-music {
+    margin-top: 30px;
+  }
+
+  .right-column {
+    width: 100%;
+  }
+
+  .section-title {
+    font-size: 16px;
+    line-height: 29px;
+  }
+
+  .section1-title {
+    padding-top: 35px;
+  }
+
+  .section1-title::after, .section3-title::after, .section4-title::after, .section5-title::after {
+    margin-top: 4px;
+  }
+
+  .paragraph {
+    width: 100%;
+  }
+
+  .column-picture {
+    margin-right: 18px;
+  }
+
+  .search {
+    width: 100%;
+  }
+
+  .field {
+    width: 100%;
+    padding-left: 17px;
+  }
+
+  .section3 {
+    margin-top: 36px;
+  }
+
+  .section3-field {
+    margin-top: 23px;
+    width: 100%;
+  }
+
+  .subscribe {
+    width: 100%;
+  }
+
+  .tegs {
+    width: 100%;
+    margin-top: 36px;
+  }
+
+  .tegs-names {
+    margin-top: 22px;
+  }
+
+  .tegs-name {
+    padding: 3px 13px;
+  }
+
+  .topics {
+    margin-top: 32px;
+  }
+
+  .section5-title {
+    padding-left: 0px;
+  }
+
+  .topics-name:nth-child(n+2) {
+    margin-top: 2px;
+  }
+
+
+
+  /* магазин */
+
+  .shop {
+    width: 100%;
+    padding: 35px 17px 0;
+    /*margin: auto; */
+  }
+
+  .shop-title {
+    /* font-size: 20px;
+    line-height: 29px;
+    color: #0f0d0e;
+    font-weight: 700;
+    font-family: open sans;
+    text-transform: uppercase;
+    text-align: center; */
+    font-size: 16px;
+  }
+
+  .shop-title::after {
+    /* content: "";
+    display: block;
+    margin: auto;
+    margin-top: 6px;
+    height: 3px;
+    width: 66px;
+    border-top: 3px;
+    background-color: #b59f5b; */
+  }
+
+  .products {
+    /* display: flex;
+    justify-content: space-between;*/
+    margin-top: 285px;
+    flex-direction: column;
+  }
+
+  .product {
+    padding: 0 18px 25px;
+    width: 100%;
+    /*outline: 3px solid #b59f5b;
+    outline-offset: 0px; */
+  }
+
+  .product:nth-child(n+2) {
+    margin-top: 284px;
+  }
+
+  .product-picture {
+    margin-top: -258px;
+  }
+
+  .product-title {
+    /* margin-top:17px;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    font-family: open sans;
+    text-transform: uppercase; */
+    font-size: 17px;
+    line-height: 22px;
+  }
+
+  .product-title-hyper {
+    /* color: #0f0d0e;
+    text-decoration: none; */
+  }
+
+  .product-text {
+    /* margin-top: 3px;
+    font-size: 15px;
+    line-height: 22px;
+    color: #0f0d0e;
+    font-weight: 400;
+    font-family: open sans; */
+  }
+
+  .product-text-hyper {
+    /* color: #b59f5b;
+    text-decoration: none; */
+  }
+
+  .price-button {
+    padding-right: 4px;
+    /* padding-top: 22px;
+    display: flex;
+    justify-content: space-between; */
+  }
+
+  .product__prices {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 3px; */
+  }
+
+  .product__price-old {
+    /* font-size: 14px;
+    line-height: 24px;
+    text-decoration: line-through;
+    color: #0f0d0e;
+    font-weight: 700;
+    font-family: open sans; */
+  }
+
+  .product__price {
+    /* margin-top: -3px;
+    font-size: 20px;
+    line-height: 24px;
+    color: #0f0d0e;
+    font-weight: 700;
+    font-family: open sans; */
+  }
+
+  .buy {
+    /* width: 140px;
+    height: 48px;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: open sans;
+    text-transform: uppercase;
+    background-color: #b59f5b;
+    border: none; */
   }
 }
